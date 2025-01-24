@@ -9,13 +9,13 @@
   &::after,
   &.link-emphasis-mktg::before {
     position: absolute;
+    // stylelint-disable-next-line primer/spacing
     bottom: -0.15em;
     left: 0;
     width: calc(100% - 1em);
     height: 2px;
     pointer-events: none;
     content: '';
-    // stylelint-disable-next-line primer/colors
     background-color: currentColor;
     transform: scaleX(0);
     transform-origin: 0 0;
@@ -44,6 +44,7 @@
 
   &.arrow-target-mktg {
     .arrow-symbol-mktg {
+      // stylelint-disable-next-line primer/spacing
       margin-left: -$em-spacer-3;
     }
   }

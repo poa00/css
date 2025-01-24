@@ -12,6 +12,7 @@
 .subnav-bordered {
   // stylelint-disable-next-line primer/spacing
   padding-bottom: 20px;
+  // stylelint-disable-next-line primer/borders, primer/colors
   border-bottom: $border-width $border-style var(--borderColor-muted, var(--color-border-muted));
 }
 
@@ -23,12 +24,14 @@
   position: relative;
   float: left;
   // stylelint-disable-next-line primer/spacing
-  padding: 5px $spacer-3;
+  padding: 5px var(--base-size-16);
+  // stylelint-disable-next-line primer/typography
   font-weight: $font-weight-semibold;
   // stylelint-disable-next-line primer/typography
   line-height: 20px;
   color: var(--fgColor-default, var(--color-fg-default));
-  border: $border-width $border-style var(--borderColor-default, var(--color-border-default));
+  // stylelint-disable-next-line primer/borders, primer/colors
+  border: $border-width $border-style var(--control-borderColor-rest, var(--color-border-default));
 
   + .subnav-item {
     // stylelint-disable-next-line primer/spacing
@@ -67,12 +70,16 @@
   }
 
   &:first-child {
+    // stylelint-disable-next-line primer/borders
     border-top-left-radius: $border-radius;
+    // stylelint-disable-next-line primer/borders
     border-bottom-left-radius: $border-radius;
   }
 
   &:last-child {
+    // stylelint-disable-next-line primer/borders
     border-top-right-radius: $border-radius;
+    // stylelint-disable-next-line primer/borders
     border-bottom-right-radius: $border-radius;
   }
 }
@@ -85,7 +92,7 @@
 
 .subnav-search-input {
   width: 320px;
-  padding-left: $spacer-5;
+  padding-left: var(--base-size-32);
   color: var(--fgColor-muted, var(--color-fg-muted));
 }
 
@@ -96,8 +103,9 @@
 
 .subnav-search-icon {
   position: absolute;
+  // stylelint-disable-next-line primer/spacing
   top: 9px;
-  left: 8px;
+  left: var(--base-size-8);
   display: block;
   color: var(--fgColor-muted, var(--color-fg-muted));
   text-align: center;

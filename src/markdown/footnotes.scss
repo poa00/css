@@ -13,17 +13,19 @@
   }
 
   .footnotes {
+    // stylelint-disable-next-line primer/typography
     font-size: $h6-size;
     color: var(--fgColor-muted, var(--color-fg-muted));
+    // stylelint-disable-next-line primer/borders, primer/colors
     border-top: $border;
 
     ol {
-      padding-left: $spacer-3;
+      padding-left: var(--base-size-16);
 
       ul {
         display: inline-block;
-        padding-left: $spacer-3;
-        margin-top: $spacer-3;
+        padding-left: var(--base-size-16);
+        margin-top: var(--base-size-16);
       }
     }
 
@@ -33,14 +35,15 @@
 
     li:target::before {
       position: absolute;
-      top: -$spacer-2;
-      right: -$spacer-2;
-      bottom: -$spacer-2;
-      left: -$spacer-4;
+      top: calc(var(--base-size-8) * -1);
+      right: calc(var(--base-size-8) * -1);
+      bottom: calc(var(--base-size-8) * -1);
+      left: calc(var(--base-size-24) * -1);
       pointer-events: none;
       content: '';
-      // stylelint-disable-next-line primer/borders
+      // stylelint-disable-next-line primer/borders, primer/colors
       border: 2px $border-style var(--borderColor-accent-emphasis, var(--color-accent-emphasis));
+      // stylelint-disable-next-line primer/borders
       border-radius: $border-radius;
     }
 
@@ -49,6 +52,7 @@
     }
 
     .data-footnote-backref g-emoji {
+      // stylelint-disable-next-line primer/typography
       font-family: monospace;
     }
   }

@@ -11,11 +11,12 @@
   display: block;
   width: 100%;
   // stylelint-disable-next-line primer/spacing
-  padding: 12px $spacer-3;
+  padding: 12px var(--base-size-16);
   color: var(--fgColor-default, var(--color-fg-default));
   text-align: left;
   background-color: transparent;
   border: 0;
+  // stylelint-disable-next-line primer/borders, primer/colors
   border-top: $border-width $border-style var(--borderColor-muted, var(--color-border-muted));
 
   &:first-child {
@@ -58,6 +59,7 @@
 
   // Bar on the left
   &::before {
+    // stylelint-disable-next-line primer/colors
     background-color: var(--underlineNav-borderColor-active, var(--color-primer-border-active));
   }
 }
@@ -68,7 +70,7 @@
 
 .SideNav-icon {
   width: 16px;
-  margin-right: $spacer-2;
+  margin-right: var(--base-size-8);
   color: var(--fgColor-muted, var(--color-fg-muted));
 }
 
@@ -80,7 +82,7 @@
   position: relative;
   display: block;
   width: 100%;
-  padding: $spacer-1 0;
+  padding: var(--base-size-4) 0;
   color: var(--fgColor-accent, var(--color-accent-fg));
   text-align: left;
   background-color: transparent;
@@ -94,6 +96,7 @@
 
 .SideNav-subItem[aria-current]:not([aria-current='false']),
 .SideNav-subItem[aria-selected='true'] {
+  // stylelint-disable-next-line primer/typography
   font-weight: $font-weight-semibold;
   color: var(--fgColor-default, var(--color-fg-default));
 }

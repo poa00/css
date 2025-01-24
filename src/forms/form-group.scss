@@ -95,7 +95,7 @@
   dd, // TODO: Deprecate
   .form-group-body {
     h4 {
-      margin: $spacer-1 0 0;
+      margin: var(--base-size-4) 0 0;
 
       &.is-error {
         color: var(--fgColor-danger, var(--color-danger-fg));
@@ -134,7 +134,9 @@
   .error,
   .indicator {
     display: none;
+    // stylelint-disable-next-line primer/typography
     font-size: $font-size-small;
+    // stylelint-disable-next-line primer/typography
     font-weight: $font-weight-bold;
   }
 
@@ -172,25 +174,31 @@
       z-index: 10;
       display: block; // Show up in errored/warn state
       max-width: 450px; // Keep our long errors readable
-      padding: $spacer-1 $spacer-2;
-      margin: $spacer-2 0 0;
+      padding: var(--base-size-4) var(--base-size-8);
+      margin: var(--base-size-8) 0 0;
+      // stylelint-disable-next-line primer/typography
       font-size: $font-size-small;
+      // stylelint-disable-next-line primer/typography
       font-weight: $font-weight-normal;
+      // stylelint-disable-next-line primer/borders
       border-style: $border-style;
+      // stylelint-disable-next-line primer/borders
       border-width: $border-width;
+      // stylelint-disable-next-line primer/borders
       border-radius: $border-radius;
 
       &::after,
       &::before {
         position: absolute;
         bottom: 100%;
+        // stylelint-disable-next-line primer/spacing
         left: 10px;
         z-index: 15;
         width: 0;
         height: 0;
         pointer-events: none;
         content: ' ';
-        // stylelint-disable-next-line primer/borders
+        // stylelint-disable-next-line primer/borders, primer/colors
         border: $border-style transparent;
       }
 
@@ -276,7 +284,8 @@
 .note {
   min-height: 17px;
   // stylelint-disable-next-line primer/spacing
-  margin: $spacer-1 0 2px;
+  margin: var(--base-size-4) 0 2px;
+  // stylelint-disable-next-line primer/typography
   font-size: $font-size-small;
   color: var(--fgColor-muted, var(--color-fg-muted));
 
